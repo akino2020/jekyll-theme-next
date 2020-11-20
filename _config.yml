@@ -143,8 +143,26 @@ menu_icons:
   sitemap: sitemap
   commonweal: heartbeat
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
+  <!-- or -->
 
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+
+var gitalk = new Gitalk({
+  clientID: '3df02299c420910017ad',
+  clientSecret: '3caf76b7109246ebfe685b4d15bbd37e7619e57a',
+  repo: 'https://akino2020.github.io/',
+  owner: 'akino2020',
+  admin: ['akino2020'],
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
 
 # ---------------------------------------------------------------
 # Scheme Settings
